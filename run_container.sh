@@ -8,4 +8,4 @@ docker run -d --name dockerweb \
 	-v $local_path/db:/var/lib/mysql \
        	-p 443:443 \
 	-p 3306:3306 \
-	php-nginx-dist:1.0
+	php-nginx-dist:phpnginx
