@@ -24,11 +24,12 @@ git clone https://github.com/wayixia/docker-web.git
 ```
 docker-web/
 ├── app/                    # Web 应用代码目录
-│   └── index.html         # 示例首页文件
+│   └── upload/            # nginx 访问app的根目录 
+|       |___ index.php(.html)  # 示例首页文件
 ├── nginx-sites-enabled/   # Nginx 站点配置文件
 │   └── default.conf       # 默认站点配置
 ├── scripts/               # 容器管理脚本
-│   └── create-container.sh # 容器创建脚本
+│   └── run_container.sh   # 容器创建脚本
 └── README.md              # 项目说明文档
 ```
 
