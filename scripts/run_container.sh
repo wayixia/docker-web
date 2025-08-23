@@ -1,11 +1,14 @@
 #!/bin/bash
 
+
 local_path=$(cd "$(dirname "$0")"; pwd)
 
 docker run -d --name dockerweb \
 	-v $local_path/../app:/app \
 	-v $local_path/../nginx-sites-enabled:/etc/nginx/sites-enabled \
-	-v $local_path/../db:/var/lib/mysql \
- 	-p 443:443 \
-	-p 3306:3306 \
-	wayixia/php-nginx-dist:phpnginx
+	-p 80:80 \
+	-p 9000:9000 \
+	wayixia/php-nginx-dist:1.0
+
+
+#wayixia/php-nginx-dev:1.0
