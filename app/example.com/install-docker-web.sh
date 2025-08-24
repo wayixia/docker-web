@@ -9,6 +9,13 @@ appname=$(basename "$filepath")
 conf=$appname.conf
 
 
+if [[ "$1" == "--debug" ]]; then 
+  #使用debug模式, 不需要配置ssl证书, 确实需要调试ssl，可自行手动更改$appname.debug.conf
+  conf=$appname.debug.conf
+fi
+
+
+echo $conf
 
 echo "Restart docker-web server after installation completed"
 echo "======================================================"
