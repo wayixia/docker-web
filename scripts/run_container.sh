@@ -7,6 +7,7 @@ docker run -d --name dockerweb \
 	-v $local_path/../app:/app \
 	-v $local_path/../nginx-sites-enabled:/etc/nginx/sites-enabled \
 	-p 80:80 \
+	-p 443:443 \
 	-p 9000:9000 \
 	wayixia/php-nginx-dist:1.0
 
